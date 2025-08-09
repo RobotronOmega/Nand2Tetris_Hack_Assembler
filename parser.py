@@ -37,6 +37,8 @@ class Parser():
                 is_instruction = True
             if len(self.program) == 0:
                 self.has_more_lines = False
+                if len(self.line) < 0:
+                    break
     
     def instruction_type(self):
         if self.line[0] == "@":
